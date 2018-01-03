@@ -267,7 +267,6 @@
         }
     }
 </style>
-
 <template>
     <transition name="fade">
         <div class="loading-back" v-if="showLoadFrame">
