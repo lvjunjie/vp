@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fff;
+
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background: #222222;
+    /*  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));*/
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+body{
+    background: #fff;
+    font-size: 12px;
+    font-family: 'Oranienbaum', serif;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clr {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+
+}
