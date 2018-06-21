@@ -3,14 +3,14 @@
  */
 export default {
     test:function () {
-        return console.log('测试')
+        return console.log('测试222')
     },
     randomSort:function (arr) {//数组随机排序
         if(arr.length>0){
             return arr.sort(function () {
                 return 0.5-Math.random();
             })
-            
+
         }
     },
     loadImgOver:function (srcList,callBack) {
