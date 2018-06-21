@@ -15,9 +15,6 @@
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%,-50%);
-
-
-
         margin: auto;
     }
     .photo-frame:active {
