@@ -118,7 +118,7 @@
         </div>
         <div class="photo-space">
             <div class="item" v-for="item in filterPhotoList" v-on:click="showPhotoFrame(item)">
-                <img :src="item.path">
+                <img src="../../assets/images/loading.jpg" :data-echo="item.path" >
             </div>
             <div class="item-fill"></div>
 
@@ -136,6 +136,17 @@
               photoList:[],
               categoryList:[],
               category:''
+          }
+      },
+
+      watch:{
+          filterPhotoList:function () {
+              this.$nextTick(function () {
+                  Echo.init({
+                      offset: 0,
+                      throttle: 0
+                  });
+              })
           }
       },
       methods:{

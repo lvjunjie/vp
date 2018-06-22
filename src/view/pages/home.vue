@@ -98,7 +98,7 @@
 
     <div class="waterfall">
       <div class="item" v-for="item in photoList" >
-        <img :src="item.path"  v-on:click="showPhotoFrame(item)">
+        <img src="../../assets/images/loading.jpg" :data-echo="item.path"  v-on:click="showPhotoFrame(item)">
 <!--        <figure v-on:click="showPhotoFrame(item)">
             <div class="info">
               <div class="title">{{item.name}}</div>
@@ -121,6 +121,17 @@
               photoList:[]
           }
       },
+      watch:{
+          photoList:function () {
+              this.$nextTick(function () {
+                  Echo.init({
+                      offset: 0,
+                      throttle: 0
+                  });
+              })
+          }
+      },
+
       methods:{
           getPhotoList:function () {
               this.$http.get('src/json/photo.json')
@@ -134,12 +145,10 @@
                           srcList.push(item.path)
                       })
 
-
-                      this.Fuc.loadImgOver(srcList, ()=> {
-
+                      setTimeout( () => {
                           this.eventBus.$emit('loadingFrame')
+                      },3000)
 
-                      })
 
                   })
           },
@@ -152,6 +161,10 @@
       },
       created:function () {
           this.getPhotoList()
+
+
+
+
       }
 
   };

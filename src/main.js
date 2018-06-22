@@ -7,6 +7,7 @@ import _ from  'lodash'
 import VueTouch from 'vue-touch'
 
 import Fuc from './js/common'
+import Echo from './js/echo'
 
 import filters from './js/filter'
 import directives from './js/directive'
